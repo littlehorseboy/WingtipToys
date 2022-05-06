@@ -11,43 +11,52 @@ namespace WingtipToys
 {
 
 
-    public partial class SiteMaster
+    public partial class ShoppingCart
     {
 
         /// <summary>
-        /// cartCount 控制項。
+        /// ShoppingCartTitle 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor cartCount;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ShoppingCartTitle;
 
         /// <summary>
-        /// Image1 控制項。
+        /// CartList 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
+        protected global::System.Web.UI.WebControls.GridView CartList;
 
         /// <summary>
-        /// categoryList 控制項。
+        /// LabelTotalText 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView categoryList;
+        protected global::System.Web.UI.WebControls.Label LabelTotalText;
 
         /// <summary>
-        /// MainContent 控制項。
+        /// lblTotal 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.Label lblTotal;
+
+        /// <summary>
+        /// UpdateBtn 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button UpdateBtn;
     }
 }
