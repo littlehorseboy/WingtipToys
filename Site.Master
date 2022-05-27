@@ -78,7 +78,7 @@
 
         <div id="TitleContent" style="text-align: center;">
             <a runat="server" href="~/">
-                <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/horse-184116_640.png" />
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/logo.jpg" BorderStyle="None" />
             </a>
         </div>
 
@@ -103,7 +103,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - 我的 ASP.NET  應用程式</p>
+                <p>&copy; <%: DateTime.Now.Year %> - Wingtip Toys</p>
             </footer>
         </div>
     </form>
