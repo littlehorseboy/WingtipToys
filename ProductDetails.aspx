@@ -14,7 +14,8 @@
                     </td>
                     <td>&nbsp;</td>
                     <td style="vertical-align: top; text-align: left;">
-                        <b>Description:</b><br />
+                        <b>Description:</b>
+                        <br />
                         <%#:Item.Description %>
                         <br />
                         <span><b>Price:</b>&nbsp;<%#: String.Format("{0:c}", Item.UnitPrice) %></span>

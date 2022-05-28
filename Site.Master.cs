@@ -86,7 +86,7 @@ namespace WingtipToys
 
         public IQueryable<Category> GetCategories()
         {
-            ProductContext _db = new ProductContext();
+            var _db = new WingtipToys.Models.ProductContext();
 
             IQueryable<Category> query = _db.Categories;
 
