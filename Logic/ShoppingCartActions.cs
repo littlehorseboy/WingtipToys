@@ -107,6 +107,7 @@ namespace WingtipToys.Logic
                 {
                     int CartItemCount = CartItemUpdates.Count();
                     List<CartItem> myCart = GetCartItems();
+
                     foreach (var cartItem in myCart)
                     {
                         // Iterate through all rows within shopping cart list

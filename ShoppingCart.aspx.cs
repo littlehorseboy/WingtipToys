@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
 using System.Web;
+using System.Web.ModelBinding;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using WingtipToys.Logic;
@@ -47,6 +48,7 @@ namespace WingtipToys
                 string cartId = usersShoppingCart.GetCartId();
 
                 ShoppingCartActions.ShoppingCartUpdates[] cartUpdates = new ShoppingCartActions.ShoppingCartUpdates[CartList.Rows.Count];
+
                 for (int i = 0; i < CartList.Rows.Count; i++)
                 {
                     IOrderedDictionary rowValues = new OrderedDictionary();
@@ -61,9 +63,13 @@ namespace WingtipToys
                     quantityTextBox = (TextBox)CartList.Rows[i].FindControl("PurchaseQuantity");
                     cartUpdates[i].PurchaseQuantity = Convert.ToInt16(quantityTextBox.Text.ToString());
                 }
+
                 usersShoppingCart.UpdateShoppingCartDatabase(cartId, cartUpdates);
+
                 CartList.DataBind();
-                lblTotal.Text = String.Format("{0:c}", usersShoppingCart.GetTotal());
+
+                lblTotal.Text = string.Format("{0:c}", usersShoppingCart.GetTotal());
+
                 return usersShoppingCart.GetCartItems();
             }
         }
