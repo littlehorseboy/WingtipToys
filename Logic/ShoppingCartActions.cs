@@ -206,5 +206,19 @@ namespace WingtipToys.Logic
             public int PurchaseQuantity;
             public bool RemoveItem;
         }
+
+        public void MigrateCart(string cardId, string userName)
+        {
+            var shoppingCart = _db.ShoppingCartItems.Where(c => c.CartId == cardId);
+
+            foreach (CartItem item in shoppingCart)
+            {
+                item.CartId = userName;
+            }
+
+            HttpContext.Current.Session[CartSessionKey] = userName;
+
+            _db.SaveChanges();
+        }
     }
 }

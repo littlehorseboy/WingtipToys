@@ -25,6 +25,13 @@ namespace WingtipToys.Account
                 //manager.SendEmail(user.Id, "確認您的帳戶", "請按一下此連結確認您的帳戶 <a href=\"" + callbackUrl + "\">這裏</a>.");
 
                 signInManager.SignIn( user, isPersistent: false, rememberBrowser: false);
+
+                using (var usersShoppingCart = new WingtipToys.Logic.ShoppingCartActions())
+                {
+                    string cartId = usersShoppingCart.GetCartId();
+                    usersShoppingCart.MigrateCart(cartId, user.Id);
+                }
+
                 IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
             }
             else 

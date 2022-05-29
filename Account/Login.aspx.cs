@@ -38,6 +38,10 @@ namespace WingtipToys.Account
                 switch (result)
                 {
                     case SignInStatus.Success:
+                        var usersShoppingCart = new WingtipToys.Logic.ShoppingCartActions();
+                        string cartId = usersShoppingCart.GetCartId();
+                        usersShoppingCart.MigrateCart(cartId, Email.Text);
+
                         IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
                         break;
                     case SignInStatus.LockedOut:
