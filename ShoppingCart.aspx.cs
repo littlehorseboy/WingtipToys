@@ -30,7 +30,7 @@ namespace WingtipToys
                     lblTotal.Text = "";
                     ShoppingCartTitle.InnerText = "Shopping Cart is Empty";
                     UpdateBtn.Visible = false;
-                    CheckoutBtn_Click = false;
+                    CheckoutImageBtn.Visible = false;
                 }
             }
         }
