@@ -463,6 +463,7 @@
     </Compile>
     <Compile Include="Logic\ExceptionUtility.cs" />
     <Compile Include="Logic\PayPalFunctions.cs" />
+    <Compile Include="Logic\RoleActions.cs" />
     <Compile Include="Logic\ShoppingCartActions.cs" />
     <Compile Include="Models\CartItem.cs" />
     <Compile Include="Models\Order.cs" />

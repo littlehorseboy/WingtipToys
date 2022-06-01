@@ -7,6 +7,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
+using WingtipToys.Logic;
 using WingtipToys.Models;
 
 namespace WingtipToys
@@ -24,6 +25,10 @@ namespace WingtipToys
 
             // Add Routes.
             RegisterCustomRoutes(RouteTable.Routes);
+
+            // Create the custom role and user.
+            RoleActions roleActions = new RoleActions();
+            roleActions.AddUserAndRole();
         }
 
         void RegisterCustomRoutes(RouteCollection routes)
