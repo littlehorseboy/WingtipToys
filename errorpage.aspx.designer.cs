@@ -11,7 +11,7 @@ namespace WingtipToys
 {
 
 
-    public partial class errorpage
+    public partial class ErrorPage
     {
 
         /// <summary>

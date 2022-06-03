@@ -8,7 +8,7 @@ using WingtipToys.Logic;
 
 namespace WingtipToys
 {
-    public partial class errorpage : System.Web.UI.Page
+    public partial class ErrorPage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

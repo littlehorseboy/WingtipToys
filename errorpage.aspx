@@ -1,8 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="errorpage.aspx.cs" Inherits="WingtipToys.errorpage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ErrorPage.aspx.cs" Inherits="WingtipToys.ErrorPage" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Error:</h2>
     <p></p>
-    <asp:Label ID="FriendlyErrorMsg" runat="server" Text="Label" Font-Size="Large" style="color: red"></asp:Label>
+    <asp:Label ID="FriendlyErrorMsg" runat="server" Text="Label" Font-Size="Large" Style="color: red"></asp:Label>
 
     <asp:Panel ID="DetailedErrorPanel" runat="server" Visible="false">
         <p>&nbsp;</p>
@@ -21,7 +22,7 @@
             <asp:Label ID="InnerMessage" runat="server" Font-Size="Small" /><br />
         </p>
         <p>
-            <asp:Label ID="InnerTrace" runat="server"  />
+            <asp:Label ID="InnerTrace" runat="server" />
         </p>
     </asp:Panel>
 </asp:Content>
